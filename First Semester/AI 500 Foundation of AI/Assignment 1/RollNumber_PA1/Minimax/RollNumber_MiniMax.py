@@ -27,7 +27,17 @@ class MathDuel:
         - Check if the game is over
         - Switch turns
         """
-        pass
+        if move > self.current_number or move not in self.allowed_moves:
+             print("chuse the corect movenumber ")
+             return 
+        else:
+                self.current_number -=move
+                if self.current_number == 0 :
+                    self.winner=self.player_turn
+                else:
+                    self.player_turn =1-self.player_turn
+                
+        return
 
     def evaluate(self):
         """TODO: Implement evaluation function.
@@ -36,7 +46,11 @@ class MathDuel:
           -1 if MIN wins
            0 if game not over
         """
-        pass
+        if self.winner==1:
+            return 1
+        elif self.winner==0:
+            return -1
+        return 0
 
     def minimax(self, state, depth, is_maximizing, alpha=-math.inf, beta=math.inf):
         """TODO: Implement minimax with alpha-beta pruning.
