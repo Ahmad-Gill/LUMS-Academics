@@ -1,0 +1,6 @@
+1. Which search algorithm(s) perform better in terms of time efficiency (i.e., runs fastest)?
+Why?
+
+
+
+2. Which search algorithm(s) is better in terms of returning the shortest path? Why?

@@ -1,0 +1,20 @@
+1. Which search algorithm(s) perform better in terms of time efficiency (i.e., runs fastest)?
+Why?
+
+BFS has a time complexity of O(b**d), DFS has O(b**m),
+and A* has O(b**d) in the worst case but usually performs 
+better with a good heuristic. By checking the code, BFS explored 
+397 nodes and found the shortest path of 39 steps, DFS explored
+141 nodes but gave a longer path of 53 steps, and A* explored 240
+nodes and found the shortest path of 39 steps. Hence, in this case,
+DFS is the most time-efficient in terms of nodes explored, but it
+does not guarantee the shortest path. A* is more balanced because 
+it finds the shortest path while exploring fewer nodes than BFS.
+
+2. Which search algorithm(s) is better in terms of returning the shortest path? Why?
+
+BFS and A* are better at returning the shortest path because 
+they are guaranteed to find the optimal path. BFS explores all
+nodes level by level, ensuring the shortest path is found, while
+A* uses a heuristic to guide the search efficiently and also finds
+the shortest path when the heuristic is admissible.

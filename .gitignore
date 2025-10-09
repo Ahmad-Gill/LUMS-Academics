@@ -1,0 +1,4 @@
+# Ignore all CSV files
+*.csv
+
+# You can also ignore specific folders or other file types here
