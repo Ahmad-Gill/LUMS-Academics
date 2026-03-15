@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['diease', 'pest', 'wheat']
+
+roboflow:
+  workspace: ahmad-hruyx
+  project: robotics_assignmentlab5final
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/ahmad-hruyx/robotics_assignmentlab5final/dataset/1
