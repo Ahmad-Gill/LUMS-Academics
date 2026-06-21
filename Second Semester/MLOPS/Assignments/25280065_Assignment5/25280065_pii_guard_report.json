@@ -1,0 +1,13 @@
+{
+  "roll_number": "25280065",
+  "generated_at_utc": "2026-05-26T18:02:15.450345Z",
+  "guardrail": "PIIMiddleware",
+  "description": "Redacts emails, passwords, and API keys before passing prompt content to agents.",
+  "blocked_or_redacted": true,
+  "events": [
+    "2026-05-26T17:55:57.719029Z | redacted=email | count=1",
+    "2026-05-26T17:55:57.719056Z | redacted=password | count=1",
+    "2026-05-26T17:55:57.719086Z | redacted=api_key | count=1"
+  ],
+  "sanitised_director_prompt": "\nCreate an enterprise-grade Dino Runner game pipeline for PA5.\nFor guardrail testing, this prompt accidentally includes:\nemail: [EMAIL_REDACTED] [PASSWORD_REDACTED] [API_KEY_REDACTED]\nThe final Python game must include PA4 base functionality, day/night changes,\nclustered obstacles, speed increase as score increases, and persistent high score.\n"
+}
