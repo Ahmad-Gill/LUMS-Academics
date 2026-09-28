@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "format": "flat-token-stream",
+  "dtype": "uint16",
+  "byte_order": "little",
+  "source_dataset": {
+    "repo_id": "roneneldan/TinyStories",
+    "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+    "config": "default"
+  },
+  "tokenizer": {
+    "repo_id": "commonsense-ai/tinystories-15m",
+    "revision": "9b637d07b886867ce4c325fad197a064c24a92ea",
+    "path": "tokenizer/tokenizer.json",
+    "sha256": "337a49e07b149b90832a8b007a3e8e4d222f7da95684ddfb054ebfe514a79bb2",
+    "algorithm": "byte-level BPE",
+    "vocab_size": 8192,
+    "eot_token": "<|endoftext|>",
+    "eot_token_id": 0
+  },
+  "processing": {
+    "append_one_eot_per_document": true,
+    "add_bos": false,
+    "padding": false,
+    "truncation": false,
+    "timestamp_utc": "2026-09-08T13:23:51.942567+00:00",
+    "script_git_commit": "c91b57455a520db356fc2c50d4e3a9abf8d1fbfd",
+    "package_versions": {
+      "datasets": "4.8.5",
+      "huggingface-hub": "0.36.2",
+      "numpy": "2.5.2",
+      "tokenizers": "0.23.2",
+      "tqdm": "4.70.0"
+    },
+    "limited_run": false
+  },
+  "splits": {
+    "train": {
+      "num_documents": 2119719,
+      "num_tokens": 466876982,
+      "num_eot_tokens": 2119719,
+      "num_bytes": 933753964,
+      "min_token_id": 0,
+      "max_token_id": 8191,
+      "sha256": "267ac27e33f5509e6a2ff35948aaa15be92e2d426ba715a7ac147e33d7f23c9b",
+      "path": "data/train.bin"
+    },
+    "validation": {
+      "num_documents": 21990,
+      "num_tokens": 4692376,
+      "num_eot_tokens": 21990,
+      "num_bytes": 9384752,
+      "min_token_id": 0,
+      "max_token_id": 8191,
+      "sha256": "54939aa7ed02b114bb43466317ae288f5c3b8c53c5d7e7b5f387b65105c0820e",
+      "path": "data/validation.bin"
+    }
+  }
+}
