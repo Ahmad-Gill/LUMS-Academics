@@ -1,0 +1,31 @@
+{
+  "winner": "E_raw_d32",
+  "config": {
+    "name": "E_raw_d32",
+    "seq_len": 168,
+    "label_len": 48,
+    "pred_len": 168,
+    "d_model": 32,
+    "n_heads": 4,
+    "d_ff": 64,
+    "e_layers": 1,
+    "d_layers": 1,
+    "moving_avg": 25,
+    "factor": 1,
+    "dropout": 0.1,
+    "covariates": "past+future",
+    "target_transform": "none",
+    "batch_size": 64,
+    "lr": 0.001,
+    "max_epochs": 8,
+    "patience": 2,
+    "grad_clip": 1.0,
+    "train_stride": 4,
+    "val_weeks": 10,
+    "val_stride": 24
+  },
+  "seed": 2,
+  "P_params": 22209,
+  "E_epochs": 8,
+  "final_mode": "reuse"
+}
