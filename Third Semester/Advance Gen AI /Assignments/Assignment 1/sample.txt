@@ -1,0 +1,2 @@
+This is a sample text file.
+Hello from Advanced Gen AI - Assignment 1!
