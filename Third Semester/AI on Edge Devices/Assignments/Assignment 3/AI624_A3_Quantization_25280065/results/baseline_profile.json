@@ -1,0 +1,19 @@
+{
+  "config": "FP32 baseline",
+  "unique_params_M": 124.439808,
+  "serialized_MB": 497.803017,
+  "GMACs": 16.114089984,
+  "GFLOPs": 32.228179968,
+  "profiler_GFLOPs": 21.774041216,
+  "latency_mean_ms": 13.538498530397192,
+  "latency_std_ms": 0.35666959299356926,
+  "seq_per_s": 73.86343454222482,
+  "tokens_per_s": 9454.519621404777,
+  "peak_gpu_alloc_MB": 524.366848,
+  "gpu_driver_MB": 4376.395776,
+  "peak_process_rss_MB": 1394.900992,
+  "cpu_util_%_one_core": 41.2,
+  "gpu_util_%": "unavailable",
+  "power_W": "unavailable",
+  "energy_mJ": "unavailable"
+}
