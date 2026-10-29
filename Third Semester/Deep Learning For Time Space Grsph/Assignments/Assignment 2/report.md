@@ -73,8 +73,8 @@ learned *what the training videos look like*. This question trains a ConvLSTM on
 stress-tests it with transformations that should not matter to a true motion rule (mirror, rotation,
 faster playback), diagnoses each failure, and builds a final model that holds up.
 
-<!-- REDRAW: Question2/figures/diagrams/D1_q2_roadmap.png -->
-![](Question2/figures/diagrams/D1_q2_roadmap.png)
+
+![](Question2/figures/diagrams/D1_q2_roadmap.jpg)
 
 **Diagram D1:** Roadmap of Question 2 and where each table and figure comes from.
 
@@ -97,7 +97,6 @@ Mirror and rotation generate the 8 symmetries of the square, G = {Rᵃ, MRᵃ : 
 MRᵃ = M(Rᵃ(x)) (rotate first, then mirror). Rᵃ is undone by R⁻ᵃ and each MRᵃ is its own inverse;
 both properties are asserted in the notebook for all 8 elements.
 
-<!-- REDRAW (optional, data figure): Question2/figures/diagrams/D2_symmetry_group.png -->
 ![](Question2/figures/diagrams/D2_symmetry_group.png)
 
 **Diagram D2:** The 8 elements of G applied to one real test frame. The digit "6" makes it easy to see that
@@ -110,7 +109,6 @@ Y = (x_{t+5k}, …, x_{t+9k}), keeping only target frames ≤ 20. Allowed starts
 normal training (models A, B), and t ∈ {1..14} at 1×, {1..8} at 2×, {1, 2} at 3× for speed-augmented
 training (models C, D): all five inputs and at least two targets must exist.
 
-<!-- REDRAW: Question2/figures/diagrams/D3_windows_speeds.png -->
 ![](Question2/figures/diagrams/D3_windows_speeds.png)
 
 **Diagram D3:** Frames used with t = 1 at 1×, 2× and 3×, and the allowed start frames for each speed.
@@ -185,12 +183,12 @@ passed through two ConvLSTM layers (64 hidden channels, 3×3 kernels, stride 1, 
 
 [i, f, o, g] = Conv₃ₓ₃([u_τ, h_{τ−1}]),  c_τ = σ(f) ⊙ c_{τ−1} + σ(i) ⊙ tanh(g),  h_τ = σ(o) ⊙ tanh(c_τ).
 
-<!-- REDRAW: Question2/figures/diagrams/D4_convlstm_cell.png -->
-![](Question2/figures/diagrams/D4_convlstm_cell.png)
+
+![](Question2/figures/diagrams/D4_convlstm_cell.jpg)
 
 **Diagram D4:** One ConvLSTM cell. A single 3×3 convolution over [u, h] produces the four gates.
 
-<!-- REDRAW: Question2/figures/diagrams/D5_model_A.png -->
+
 ![](Question2/figures/diagrams/D5_model_A.png)
 
 **Diagram D5:** Model A with tensor shapes and parameter counts per layer (total **480,784**, matching the handout).
@@ -199,7 +197,7 @@ The network runs for 9 steps: steps 1–5 take the true input frames, steps 6–
 previous prediction (no teacher forcing; gradients flow through the fed-back predictions). The outputs of
 steps 5–9 form Ŷ.
 
-<!-- REDRAW: Question2/figures/diagrams/D6_rollout.png -->
+
 ![](Question2/figures/diagrams/D6_rollout.png)
 
 **Diagram D6:** The 9-step rollout used in both training and evaluation.
@@ -244,7 +242,6 @@ overlap in the future frames.
 
 ### Q2.3
 
-<!-- REDRAW: Question2/figures/diagrams/D8_reach_A_vs_D.png -->
 ![](Question2/figures/diagrams/D8_reach_A_vs_D.png)
 
 **Diagram D8:** Cells (4×4 px each) that one source cell can influence within a single time step. Left: model A
@@ -293,8 +290,8 @@ If a forecaster f has learned a rule that carries over to the transformed scene,
 should equal transforming the prediction f(X). The **consistency gap** C_T measures that; the
 **transformed error** E_T measures correctness.
 
-<!-- REDRAW: Question2/figures/diagrams/D10_commutative_square.png -->
-![](Question2/figures/diagrams/D10_commutative_square.png)
+
+![](Question2/figures/diagrams/D10_commulative_square.jpg)
 
 **Diagram D10:** The two paths that should agree. C_T compares the two bottom-right boxes; E_T compares f(T(X)) with the transformed truth T(Y).
 
@@ -386,7 +383,7 @@ larger-reach model trained the same way (model D) succeeds, the 3× failure is a
 | C | baseline | k drawn uniformly from {1, 2, 3} | none |
 | D | larger reach (dilated layer 2) | k drawn uniformly from {1, 2, 3} | none |
 
-<!-- REDRAW: Question2/figures/diagrams/D9_training_pipelines.png -->
+
 ![](Question2/figures/diagrams/D9_training_pipelines.png)
 
 **Diagram D9:** How one training window is built for each model. Shaded boxes are the single thing each model
@@ -404,7 +401,7 @@ D (larger reach + speed augmentation) will also fix 3×, because 3× motion is b
 
 ### Model D
 
-<!-- REDRAW: Question2/figures/diagrams/D7_model_D.png -->
+
 ![](Question2/figures/diagrams/D7_model_D.png)
 
 **Diagram D7:** Model D. Identical to model A except that ConvLSTM layer 2 uses a 3×3 convolution with
@@ -484,7 +481,7 @@ is now within reach.
 
 Symmetrised forecaster: f̄(X) = (1/8) Σ_{g∈G} g⁻¹( f( g(X) ) ).
 
-<!-- REDRAW: Question2/figures/diagrams/D11_symmetrised_forecaster.png -->
+
 ![](Question2/figures/diagrams/D11_symmetrised_forecaster.png)
 
 **Diagram D11:** The symmetrised forecaster: transform the input by each of the 8 symmetries, predict with the
