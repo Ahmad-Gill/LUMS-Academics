@@ -1,6 +1,6 @@
 ---
 title: "AI651 – Deep Learning for Space, Time and Graphs · Assignment 2"
-author: "Muhammad Ahmad  · 25280065"
+author: "Muhammad Ahmad · 25280065"
 date: "Fall 2026"
 ---
 
@@ -8,7 +8,7 @@ date: "Fall 2026"
 
 | | |
 |---|---|
-| **Student** | Muhammad Ahmad Gill (25280065) |
+| **Student** | Muhammad Ahmad (25280065) |
 | **Course** | AI651 – Deep Learning for Space, Time and Graphs, Fall 2026 |
 | **Code (GitHub, public)** | <https://github.com/Ahmad-Gill/LUMS-Academics/tree/main/Third%20Semester/Deep%20Learning%20For%20Time%20Space%20Grsph/Assignments/Assignment%202> |
 | **Notebook** | `Question2/25280065_Question_2.ipynb` |
@@ -25,7 +25,8 @@ date: "Fall 2026"
    5. The Final Model (Table 6, Figure 6, Q2.15–Q2.17)
    6. Summary of findings
 3. Reproducibility
-4. Use of generative AI
+4. References
+5. Use of generative AI
 
 Tables and figures follow the handout's numbering (Table 1–6, Figure 1–6). Extra material that the
 handout does not number is labelled **Diagram D1–D11** (architecture and concept diagrams) and
@@ -46,9 +47,9 @@ Learned-model entries are **mean (seed 0, seed 1)**.
 
 The full pipeline is in **Figure Q1.1**, and **Figure Q1.2** shows the graph it runs on.
 
-![Figure Q1.1](Question1/figures/fig01_architecture.png)
+![Figure Q1.1](Question1/figures/fig01_architecture.jpg)
 
-*Figure Q1.1: Architecture. Four input groups are aligned to one 10-min grid and projected onto the 7 graph nodes (node tensor X [B,144,7,8]). A shared GRU and directed lag attention give node states Z [B,7,d]; announced releases are fused at the reservoir node. Three heads (base flow, observed rain, hidden rain) are added to the last valid level, giving ŷ [B,4,3]. Each box shows its output shape. Colours: teal = base flow/backbone, purple = observed rain, coral = hidden rain, gray = fixed/alignment, ochre = reservoir release, navy = forecast.*
+*Figure Q1.1: Architecture. Four input groups are aligned to one 10-min grid and projected onto the 7 graph nodes (node tensor X [B,144,7,8]). A shared GRU and directed lag attention give node states Z [B,7,d]; announced releases are fused at the reservoir node. Three heads (base flow, observed rain, hidden rain) are added to the last valid level, giving ŷ [B,4,3]. Main boxes show their output shape; the rain and hidden-rain heads also output [B,4,3]. The 7 nodes are Res, S1, T1, S2, U, S3, S4 (the handwritten list at the bottom omits U); d is the hidden size.*
 
 - **Data sources (top row of Figure Q1.1):** station levels X_lev, rain gauges X_rain, past releases X_rel, announced releases X_fut (enter at release fusion). Static graph data (A, D, P, time of day) is used in the alignment and attention blocks.
 - **Alignment, projection and reshaping:**
@@ -66,9 +67,9 @@ The full pipeline is in **Figure Q1.1**, and **Figure Q1.2** shows the graph it 
   - Rain and surprise enter through the gated heads.
 - **Output:** **ŷ [B,4,3]**, the S1–S4 levels at t + 60 min at quantiles {0.1, 0.5, 0.9}.
 
-![Figure Q1.2](Question1/figures/fig02_river_graph.png)
+![Figure Q1.2](Question1/figures/fig02_river_graph.jpg)
 
-*Figure Q1.2: The 7-node directed river graph (Res, S1, T1, S2, U, S3, S4). Teal edges point downstream only and carry river distance d_ij. Dotted purple arrows are the fixed rain projection P (the small R1 → T1 weight in A6 is left out for clarity). U is a virtual node for the unmonitored tributary: no sensor (mask ≡ 0), receives R2 rain. The dashed coral box is a requested left-side rain gauge that does not exist yet.*
+*Figure Q1.2: The 7-node directed river graph (Res, S1, T1, S2, U, S3, S4). Solid edges point downstream only (Res → S1 included) and carry the river distance d_ij (matrix D, not drawn). Dashed arrows from R1 and R2 are the fixed rain projection P (the small R1 → T1 weight in A6 is left out for clarity). U is a virtual node for the unmonitored tributary (labelled "unmounted" in the sketch; read "unmonitored"): no sensor (mask ≡ 0), receives R2 rain. The "Left gap" box is the ungauged left-side catchment, where a rain gauge is requested (I1).*
 
 ---
 
@@ -99,8 +100,8 @@ The full pipeline is in **Figure Q1.1**, and **Figure Q1.2** shows the graph it 
 | A6 | R1 represents the right-side hillsides above Res/S1, and weakly the upper T1 area through shared storms. R2 represents the U catchment and the local area above S3. | This follows the gauge positions relative to the sub-catchments. | Fixed P weights from catchment areas: R1 → Res, S1 (large), T1 (small); R2 → U, S3. |
 | A7 | Releases are recorded as discharge (m³/s) at ≥ 10-min resolution. Schedules are piecewise constant and usually announced ≥ 1 h ahead. The actual release may differ in timing or size. | Normal dam operating practice. | X_fut comes from the latest schedule known at t; a mismatch flag is raised (§5 iv). |
 | A8 | No significant backwater, and no other controlled structures or large abstractions between Res and S4. | A steep hillside river (as in the handout illustration). | Directed edges point downstream only, so the graph has no upstream influence. |
-| A9 | Travel time per reach is typically ≤ 1.5 h (rarely up to 2 h). Res → S4 (4 reaches) takes ≤ about 6 h at low flow and less at high flow. | Plausible for a short mountain river where wave speed rises with stage. | K = 12 lags (0–120 min) per edge. Queries depend on the current state, so learned delays can shrink at high flow (Figure Q1.5). |
-| A10 | Within 60 min, a station is affected only by conditions at most two reaches upstream. Anything farther away already shows in the intermediate stations' current levels. | This follows from A9: three reaches take longer than 1 h except in extreme floods. | Two attention layers (two hops) plus one release pass. Add a layer if validation shows a need. |
+| A9 | Travel time per reach is typically 30 min–1.5 h (rarely up to 2 h). Res → S4 (4 reaches) takes ≤ about 6 h at low flow and less at high flow. | Plausible for a short mountain river where wave speed rises with stage. | K = 12 lags (0–120 min) per edge. Queries depend on the current state, so learned delays can shrink at high flow (Figure Q1.5). |
+| A10 | Within 60 min, a station is affected only by conditions at most two reaches upstream. Anything farther away already shows in the intermediate stations' current levels. | This follows from A9: with at least ~30 min per reach, three reaches take longer than 1 h except in extreme floods. | Two attention layers (two hops) plus one release pass. Add a layer if validation shows a need. |
 | A11 | Hillside rain reaches the river within ~1–6 h, recession lasts up to ~12–18 h, and soil wetness has a memory of about one day. | Typical for small, steep catchments. | History L = 144 (24 h), plus a rolling 24-h rain sum as a soil-wetness proxy. |
 | A12 | Over a 1-h horizon, rain only adds water, and contributions from different areas add up. | Mass balance: rainfall cannot lower a river within the hour. | Rain heads are softplus ≥ 0 and are combined additively. |
 | A13 | Unmonitored-tributary inflow is base flow plus a response to rain near R2, entering just above S3. | Adjacent catchments share storms. | Virtual node U receives R2 rain; any remaining inflow is caught by S3's surprise. |
@@ -127,7 +128,7 @@ The full pipeline is in **Figure Q1.1**, and **Figure Q1.2** shows the graph it 
 | Raw rain reports | variable-length list (time, gauge, mm) | one record per report | t − 48 h … t (48 h are needed for the 24-h rolling sum) | Reports received by t |
 | X_rain (rain) | [B,144,2,3] | b; τ; gauge ∈ {R1,R2}; {mm in (τ−10, τ], mask, age} | t−143 … t | Yes, except in-transit bins (mask 0) |
 | X_rel (past releases) | [B,144,1] | b; τ; mean recorded release in the bin (m³/s) | t−143 … t | Yes (the latest bin may be pending) |
-| X_fut (announced releases) | [B,6,1] | b; future step h = 1…6; scheduled release effective at t + 10h min | t+10 … t+60 | Yes, but only schedules with announcement time ≤ t |
+| X_fut (announced releases) | [B,6,1] | b; future step h = 1…6; scheduled release effective at t + 10·h min | t+10 … t+60 | Yes, but only schedules with announcement time ≤ t |
 | X_tod (time of day) | [B,144,2] | b; τ; {sin, cos} | t−143 … t | Yes (clock) |
 | A (adjacency) | [7,7] | A_ji = 1 if there is an edge j → i (downstream) | static | Yes |
 | D (distances) | [7,7] | river distance d_ji (km) on edges, 0 elsewhere | static | Yes |
@@ -177,6 +178,8 @@ The full pipeline is in **Figure Q1.1**, and **Figure Q1.2** shows the graph it 
 | h_i(τ), z_i ∈ ℝ^d | GRU state; final node state (d = 64) |
 | K = 12, Q = {0.1, 0.5, 0.9} | maximum lag (120 min); quantile levels |
 | sp, σ, cs | softplus; sigmoid; ordered cumulative softplus (defined below) |
+| f_b, f_r, f_h, f_n | small MLP heads (base, observed rain, hidden rain, nowcast) |
+| β_ij, W_f | learned attention weights over upstream neighbours j ∈ N(i); fusion projection |
 
 **(1) Rain projection** (fixed P, A6). Weights are renormalised over the gauges that are currently valid:
 
@@ -319,7 +322,7 @@ Design estimates, not benchmarks:
 | Data per cycle | 5 levels + 2 gauges + 1 release, a few hundred numbers |
 | Load | 144 issuances/day; a full 24-h recompute every cycle (needed anyway when late data revises the past) fits easily in the 10-min budget (Figure Q1.11) |
 
-![Figure Q1.11](Question1/figures/fig12_operational_cycle.png)
+![Figure Q1.11](Question1/figures/fig12_operational_cycle.jpg)
 
 *Figure Q1.11: The 10-minute operating loop: ingest → mask/age → build tensor → forward pass → publish quantiles and flags, then repeat. Late data is used in the next cycle.*
 
@@ -546,7 +549,7 @@ steps 5–9 form Ŷ.
 ![](Question2/figures/plots/P1_training_curves.png)
 
 **Plot P1:** Training loss and validation E(5) (1×, t = 1) for models A–D over 30 epochs (mean of the two seeds;
-band = range across seeds). Validation error is still falling at epoch 30, so all models are somewhat
+band = range across seeds). Validation error is still trending down over the last epochs, so all models are somewhat
 under-trained under the fixed protocol. C and D train on harder (faster) windows, so their training loss is higher.
 
 ### Results
@@ -597,7 +600,7 @@ A's error grows from 0.0171 (h = 1) to 0.0265 (h = 5), about +55 %, because it f
 Figure 2 shows predictions blurring and fading with each frame, with a visible 4×4 block pattern from pixel_shuffle.
 When digits overlap, A merges them into one blob and cannot separate them: in video 851 the 3 and 1 overlap at
 frame 6 and the 1 never reappears, even though they separate in the truth. In video 1 the 8 and 2 merge into one
-vertical blob. Validation E(5) was still falling at epoch 30, so A is somewhat undertrained, which may explain the seed gap
+vertical blob. Validation E(5) was still trending down over the last epochs, so A is somewhat undertrained, which may explain the seed gap
 (0.0232 vs 0.0214).
 
 ### Q2.5 (written before running Testing the Baseline)
@@ -777,14 +780,17 @@ is now within reach.
 
 ### Q2.13
 
-- **Mirror/rotation → appearance.** Measured by the extra error a transformation causes (E_T − E(5), Plot P4):
+- **Mirror/rotation → appearance.** Measured by the extra error a transformation causes (E_T − E(5), Plot P4),
+  as mean (seed 0, seed 1):
 
-  | | E_M − E(5) | E_R − E(5) |
+  | Model | E_M − E(5) | E_R − E(5) |
   |---|---|---|
-  | A | +0.0007 | +0.0018 |
-  | B | 0.0000 | 0.0000 |
-  | C | +0.0002 | +0.0011 |
-  | D | +0.0002 | +0.0010 |
+  | A | 7e-04 (4e-04, 9e-04) | 0.0018 (0.0016, 0.0020) |
+  | B | 0 (0, 0) | 0 (−1e-04, 0) |
+  | C | 2e-04 (2e-04, 2e-04) | 0.0011 (0.0010, 0.0012) |
+  | D | 2e-04 (2e-04, 3e-04) | 0.0010 (0.0011, 0.0010) |
+
+  These are differences of the three-significant-figure entries in Table 5, so only their first digit is meaningful.
 
   B removes the penalty completely (E_M = E_R = E(5) = 0.0221); C and D only shrink it. Their smaller C_T partly reflects
   blurrier predictions, not a learned symmetry (Q2.6). So the cause is appearance, and symmetry augmentation fixes it.
@@ -801,7 +807,7 @@ is now within reach.
 
 - **B:** no cost (E(5) at 1×: 0.0221 vs 0.0223, within seed spread). Worth it.
 - **C, D:** yes, E(5) at 1× rises to 0.0276 and 0.0271 (about +22–24 %), because only a third of their training is at 1×.
-  Still worth it: 2× and 3× errors drop by about 0.014, so they work at all speeds. D is also slower
+  Still worth it: E(2) at 2× and 3× drops by 0.014–0.016, so they work at all speeds. D is also slower
   (0.703 s vs 0.554 s inference, 23.1 vs 19.9 s/epoch).
 
 \newpage
@@ -909,21 +915,37 @@ Assignment 2/
 ├── DL4STG_PA2.pdf                     ← handout
 ├── Question1/
 │   ├── Q.md                           ← Question 1 answer (copied into this report)
-│   └── figures/                       ← Figures Q1.1–Q1.12 (PNG); src/ holds the scripts (run_all.py)
+│   ├── Question1.ipynb                ← optional companion notebook (ungraded)
+│   ├── assignment2/                   ← helper package for the companion notebook
+│   ├── checkpoints/manifest.json      ← pre-trained companion models (weights git-ignored)
+│   ├── requirements.txt
+│   └── figures/                       ← Figures Q1.1–Q1.12
+│       ├── fig01, fig02, fig12 (.jpg) ← final versions of Figures Q1.1, Q1.2, Q1.11 used in this report
+│       ├── fig03–fig11 (.png)         ← Figures Q1.3–Q1.10, Q1.12
+│       └── src/                       ← one script per figure, plus run_all.py and style.py
 └── Question2/
-    ├── 25280065_Question_2.ipynb       ← all code, tables and figures (Sections 1–5)
+    ├── 25280065_Question_2.ipynb      ← all code, tables and figures (Sections 1–5)
     ├── make_report_figures.py         ← regenerates Diagrams D1–D11 and Plots P1–P5
     ├── figures/                       ← Figures 1–6 (PNG)
     │   ├── gifs/                      ← animated Figure 3 and Figure 6(a) panels
     │   ├── diagrams/                  ← Diagrams D1–D11
     │   └── plots/                     ← Plots P1–P5
-    ├── checkpoints/                   ← trained weights (git-ignored)
-    └── data/                          ← Moving MNIST (downloaded by torchvision, git-ignored)
+    ├── checkpoints/                   ← trained weights (created on run, git-ignored)
+    └── data/                          ← Moving MNIST (downloaded by torchvision on run, git-ignored)
 ```
 
 * Seeds 0 and 1 for every learned model; seed 0 is used for all figures and GIFs.
 * Pre-registered answers: Q2.5 committed in `fc4408f` before Section 3; Q2.11 committed in `4d38afc` before training B–D.
 * Supplementary diagrams and plots: run `../.venv/bin/python -I make_report_figures.py` from `Question2/`.
+
+\newpage
+
+# References
+
+Shi, X., Chen, Z., Wang, H., Yeung, D.-Y., Wong, W.-K., and Woo, W. (2015). Convolutional LSTM Network: A Machine
+Learning Approach for Precipitation Nowcasting. *NeurIPS*.
+
+Srivastava, N., Mansimov, E., and Salakhutdinov, R. (2015). Unsupervised Learning of Video Representations using LSTMs. *ICML*.
 
 \newpage
 
@@ -947,10 +969,3 @@ and run by me; the AI checked it against the handout and suggested corrections.
 | 7 | "Prepare report.md with all figures and architecture diagrams." | This report skeleton, Diagrams D1–D11 and Plots P1–P5. | *(describe your edits; Diagrams D1, D3–D11 to be redrawn by hand)* |
 
 Q2.5 and Q2.11 were written and committed before the corresponding experiments and were not changed afterwards.
-
-# References
-
-Shi, X., Chen, Z., Wang, H., Yeung, D.-Y., Wong, W.-K., and Woo, W. (2015). Convolutional LSTM Network: A Machine
-Learning Approach for Precipitation Nowcasting. *NeurIPS*.
-
-Srivastava, N., Mansimov, E., and Salakhutdinov, R. (2015). Unsupervised Learning of Video Representations using LSTMs. *ICML*.
