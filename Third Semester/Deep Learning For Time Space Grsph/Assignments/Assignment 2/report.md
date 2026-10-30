@@ -909,34 +909,36 @@ construction, so on its own it is not evidence of learned motion. Against that, 
 
 # Reproducibility
 
+**Submission package** (what is handed in):
+
+```
+25280065_Assignment_2_Submission/
+├── 25280065_Assignment_2_Report.pdf   ← this report
+├── 25280065_Assignment_2_Report.docx  ← editable copy of this report
+├── 25280065_Question_2.ipynb          ← Question 2 code, Tables 1–6, Figures 1–6
+├── README.md                          ← overview of the assignment and the models
+└── figures/                           ← every figure in this report, named by number
+    ├── Q1_Fig01 … Q1_Fig12            ← Figures Q1.1–Q1.12
+    ├── Q2_Fig1 … Q2_Fig6b             ← Figures 1–6, plus the Figure 3 and 6(a) GIFs
+    ├── Q2_D01 … Q2_D11                ← Diagrams D1–D11
+    └── Q2_P01 … Q2_P05                ← Plots P1–P5
+```
+
+**Code repository** (GitHub link on page 1), with the scripts that regenerate every figure:
+
 ```
 Assignment 2/
-├── report.md                          ← this report
-├── DL4STG_PA2.pdf                     ← handout
 ├── Question1/
 │   ├── Q.md                           ← Question 1 answer (copied into this report)
-│   ├── Question1.ipynb                ← optional companion notebook (ungraded)
-│   ├── assignment2/                   ← helper package for the companion notebook
-│   ├── checkpoints/manifest.json      ← pre-trained companion models (weights git-ignored)
-│   ├── requirements.txt
-│   └── figures/                       ← Figures Q1.1–Q1.12
-│       ├── fig01, fig02, fig12 (.jpg) ← final versions of Figures Q1.1, Q1.2, Q1.11 used in this report
-│       ├── fig03–fig11 (.png)         ← Figures Q1.3–Q1.10, Q1.12
-│       └── src/                       ← one script per figure, plus run_all.py and style.py
+│   └── figures/src/run_all.py         ← regenerates the computer-drawn Question 1 figures
 └── Question2/
-    ├── 25280065_Question_2.ipynb      ← all code, tables and figures (Sections 1–5)
-    ├── make_report_figures.py         ← regenerates Diagrams D1–D11 and Plots P1–P5
-    ├── figures/                       ← Figures 1–6 (PNG)
-    │   ├── gifs/                      ← animated Figure 3 and Figure 6(a) panels
-    │   ├── diagrams/                  ← Diagrams D1–D11
-    │   └── plots/                     ← Plots P1–P5
-    ├── checkpoints/                   ← trained weights (created on run, git-ignored)
-    └── data/                          ← Moving MNIST (downloaded by torchvision on run, git-ignored)
+    ├── 25280065_Question_2.ipynb      ← same notebook as in the submission package
+    └── make_report_figures.py         ← regenerates Diagrams D1–D11 and Plots P1–P5
 ```
 
 * Seeds 0 and 1 for every learned model; seed 0 is used for all figures and GIFs.
 * Pre-registered answers: Q2.5 committed in `fc4408f` before Section 3; Q2.11 committed in `4d38afc` before training B–D.
-* Supplementary diagrams and plots: run `../.venv/bin/python -I make_report_figures.py` from `Question2/`.
+* Not stored: Moving MNIST (downloaded by torchvision on first run) and the trained weights (re-created by the notebook, about 20 s/epoch on an Apple M2 Pro).
 
 \newpage
 
