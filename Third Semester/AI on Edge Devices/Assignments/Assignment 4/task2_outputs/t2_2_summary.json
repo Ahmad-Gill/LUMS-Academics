@@ -1,0 +1,22 @@
+{
+ "examples": 292,
+ "lora_rank": 8,
+ "lora_alpha": 16,
+ "targets": [
+  "q_proj",
+  "k_proj",
+  "v_proj",
+  "o_proj"
+ ],
+ "optimizer": "AdamW",
+ "lr": 0.0002,
+ "micro_batch": 1,
+ "grad_accum": 8,
+ "effective_batch": 8,
+ "max_len": 384,
+ "epochs": 2,
+ "updates": 72,
+ "trainable": 1081344,
+ "trainable_pct": 0.218,
+ "train_min": 4.6
+}

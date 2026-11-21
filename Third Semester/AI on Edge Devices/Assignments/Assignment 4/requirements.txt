@@ -1,0 +1,16 @@
+torch>=2.2
+torchvision>=0.17
+numpy
+pandas
+matplotlib
+pillow
+tabulate
+transformers
+peft
+accelerate
+datasets
+huggingface_hub
+pyarrow
+nats_bench
+ipykernel
+jupyter
