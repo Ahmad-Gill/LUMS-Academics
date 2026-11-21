@@ -1,21 +1,30 @@
-# Ignore all CSV files
+# ----- file types -----
 *.csv
-
-# You can also ignore specific folders or other file types here
-
-# Ignore large files exceeding 100MB
-Second Semester/RoboTics641/252800065 Week 7-8 Assignment Part 1U-NET
-Second Semester/RoboTics641/Zip Files/252800065 Week 7-8 Assignment Part 1.zip
-Second Semester/RoboTics641/Zip Files
-
 *.pth
 *.pt
 *.bin
 *.gz
-*.DS_Store
-*.DS_Store
+*.parquet
 *.npy
-Second Semester/RoboTics641/25280065_Weeek7-8Part1/.DS_Store
+*.pickle
+*.pbz2
+*.pkl
+*.h5
+*.zip
+*.safetensors
+
+# ----- data folders -----
+data/
+**/data/
+
+# ----- system / cache -----
+.DS_Store
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+
+# ----- specific large folders/files -----
+Second Semester/RoboTics641/252800065 Week 7-8 Assignment Part 1U-NET
+Second Semester/RoboTics641/Zip Files
 /Second Semester/RoboTics641/25280065_Weeek7-8Part1/yolov7
-Second Semester/RoboTics641/25280065_Weeek7-8Part1/.DS_Store
 Third Semester/AI on Edge Devices/Assignments/Assignment 2/PyTorch_CIFAR10/
