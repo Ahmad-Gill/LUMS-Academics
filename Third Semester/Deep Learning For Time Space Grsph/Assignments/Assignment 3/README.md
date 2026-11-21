@@ -1,7 +1,8 @@
 # AI651 – Deep Learning for Space, Time and Graphs — Assignment 3
 
 **Student ID:** 25280065 · **Course:** AI651, LUMS, Fall 2026
-**GitHub (code):** https://github.com/<your-username>/<your-repo> ← replace with your public repo link
+
+**GitHub (code):** [https://github.com/Ahmad-Gill/LUMS-Academics/tree/main/Third%20Semester/Deep%20Learning%20For%20Time%20Space%20Grsph/Assignments/Assignment%203](https://github.com/Ahmad-Gill/LUMS-Academics/tree/main/Third%20Semester/Deep%20Learning%20For%20Time%20Space%20Grsph/Assignments/Assignment%203)
 
 Traffic forecasting with graph neural networks: two short theory questions on what GNN aggregation and graph layers can represent (Q1–Q2), then a full spatio-temporal GNN on the **LargeST San Diego** dataset (716 sensors, 2020–2021) comparing **no graph, a fixed road graph, a learned graph and a hybrid graph** (Q3–Q7).
 
@@ -12,7 +13,7 @@ Traffic forecasting with graph neural networks: two short theory questions on wh
 | Temporal-only | None | 61.58 | 96.77 | — |
 | STGNN | Fixed road graph | 58.42 | 92.09 | 5.1% better |
 | STGNN | **Adaptive (learned)** | **52.46** | **83.07** | **14.8% better** |
-| STGNN | Hybrid | 52.68 | 83.43 | 14.5% better |
+| STGNN | Hybrid | 52.68 | 83.43 | 14.4% better |
 
 ![Test MAE, test RMSE and training time for the four models.](outputs/figures/q6_metrics_bars.png)
 
@@ -33,8 +34,8 @@ Traffic forecasting with graph neural networks: two short theory questions on wh
 README.md                 this report
 requirements.txt          Python packages
 outputs/figures/          all figures used below
-outputs/models/           trained model weights (*_residual.pt)
-outputs/results_residual.json, final_results.csv, run_config.json
+outputs/models/           trained model weights (*_residual.pt; created locally, not pushed)
+outputs/results_residual.json, final_results.csv, run_config.json   metrics, training logs, config
 data/                     LargeST files (not in the repo – see Q7)
 ```
 
@@ -101,8 +102,8 @@ NumPy least squares: a = 0.000, b = 0.500, error = 0.500. The layer cannot pick 
 The symmetric layer keeps the bump centred at sensor 20 and spreads it out (wider and flatter, like diffusion). The true rule slides the bump one sensor backwards per step without changing its shape, wrapping around the ring.
 
 ### (b) Direction-aware weights
-**a = 0, w₋ = 0, w₊ = 1**, so x̂ᵢ(t+1) = xᵢ₊₁(t), which is exactly the true rule (verified on random input: True). Because the layer knows which neighbour is ahead, it can copy from that side only. This breaks the left/right symmetry that made (a) impossible.
-**1-D convolution:** kernel **[0, 0, 1]** multiplying [xᵢ₋₁, xᵢ, xᵢ₊₁], with **circular padding** (wrap-around), so sensor 39 sees sensor 0 and sensor 0 sees sensor 39.
+**a = 0, w₋ = 0, w₊ = 1**. Substitution: x̂ᵢ(t+1) = 0·xᵢ(t) + 0·xᵢ₋₁(t) + 1·xᵢ₊₁(t) = xᵢ₊₁(t) = xᵢ(t+1) for every i and every input, which is exactly the true rule (also verified in NumPy on a random input: True). Because the layer knows which neighbour is ahead, it can copy from that side only. This breaks the left/right symmetry that made (a) impossible.
+**1-D convolution:** kernel **[0, 0, 1]** multiplying [xᵢ₋₁, xᵢ, xᵢ₊₁], with **circular padding** of 1 on each side (wrap-around), so sensor 39 sees sensor 0 and sensor 0 sees sensor 39. (PyTorch `Conv1d` computes a cross-correlation, so these entries are used as written, e.g. `nn.Conv1d(1, 1, 3, padding=1, padding_mode="circular", bias=False)` with weight [0, 0, 1].)
 
 ### (c) Adding history
 **(i)** Backward motion means the reading at i at time t−1 is now at i−1: **xᵢ(t−1) = xᵢ₋₁(t)**. Choose **a = 0, b = 1, c = −1**:
@@ -123,7 +124,7 @@ x̂ᵢ(t+1) = xᵢ₋₁(t) + xᵢ₊₁(t) − xᵢ₊₁(t) = **xᵢ₋₁(t)*
 ### (a) Extraction and resampling
 San Diego = Caltrans **District 11** in `ca_meta.csv` → **716 sensors**. 2020 and 2021 were kept, giving data shape **(70176, 716)** at 15-minute resolution.
 **Aggregation:** LargeST/PeMS flow is a **vehicle count per 5-minute interval**, so counts are **summed** to keep units (vehicles / 15 min). It is computed as mean × 3, which equals the sum when all 3 readings exist and avoids undercounting when 1–2 are missing. It stays missing if all 3 are missing.
-**Missing values:** 5.07% of 5-min readings and 5.06% of 15-min values are missing; 43 sensors are more than 50% missing. Handling:
+**Missing values:** 5.07% of 5-min readings and 5.06% of 15-min values are missing; 43 sensors are more than 50% missing and 19 of them have no readings at all in 2020–2021. Handling:
 1. A mask marks real readings. Missing targets are **excluded** from the loss and from MAE/RMSE.
 2. Model inputs are **forward-filled within each split** (past values only, so no future leakage and nothing crosses a split). Leading gaps get the sensor's **training mean**.
 
@@ -144,7 +145,7 @@ The adjacency rows and columns were selected with `ID2` from the **same `sd_meta
 | density (%) | 3.383 |
 | weight range | 0.010 – 1.000 |
 
-Neighbours per sensor: mean 24.19, median 20, max 70.
+Neighbours per sensor (|N(i)| = number of nonzero Aᵢⱼ, j ≠ i): mean 24.19, median 20, max 70; 8 sensors have no neighbours (isolated).
 **Meaning of Aᵢⱼ ≠ 0:** sensors i and j are close **along the road network**. The value is a weight that grows as road distance shrinks (distance kernel, thresholded), so larger means a stronger spatial relationship. Zero means no direct link.
 
 ![San Diego adjacency matrix (white = 0).](outputs/figures/q3b_adjacency_heatmap.png)
@@ -200,8 +201,8 @@ Explicitly modelling spatial dependencies **improves** accuracy: the gain comes 
 
 ## Question 5 – Fixed vs learnable adjacency
 
-- **(a) Fixed:** the normalised road graph Â = D^-1 (A+I) (row-normalised, directed graph), kept constant during training (the Q4(b) model).
-- **(b) Adaptive:** E₁, E₂ ∈ ℝ^(716×10), randomly initialised and trained by backpropagation (training data only). A_adaptive = Softmax(ReLU(E₁E₂ᵀ)) with a row-wise softmax. **No top-k sparsification** was used: the dense 716 × 716 matrix is cheap, so gradients flow to every entry through the softmax.
+- **(a) Fixed:** the normalised road graph Â = D^-1 (A+I) (row-normalised, directed graph), kept constant during training (a registered buffer, not a parameter; the Q4(b) model). Result: test **MAE 58.42, RMSE 92.09**, training time **743 s** (29 epochs).
+- **(b) Adaptive:** E₁, E₂ ∈ ℝ^(716×10), randomly initialised and trained by backpropagation (training data only). A_adaptive = Softmax(ReLU(E₁E₂ᵀ)) with a row-wise softmax. **No top-k sparsification** was used: the dense 716 × 716 matrix is cheap, so gradients flow to every entry through the softmax. Result: test **MAE 52.46, RMSE 83.07** (767 s), i.e. 10.2% lower MAE than the fixed graph.
 - **(c) Hybrid:** A_hybrid = α·D⁻¹(A+I) + (1−α)·A_adaptive. Both parts are row-normalised (rows sum to 1), so they are on the same scale. α = sigmoid(θ) is learned (starts at 0.5). Final **α = 0.020**, so the model puts less weight on the road graph than on the learned graph. With α ≈ 0.02 the hybrid relies almost entirely on the learned graph, which is why its accuracy is nearly the same as the adaptive model (52.68 vs 52.46 MAE).
 
 All four models share the same encoder, head, splits, seed (42) and training protocol, so differences come from the graph.
@@ -261,7 +262,7 @@ For each sensor, its 10 strongest learned links were compared with the road grap
 | % in road graph | 5.11 |
 | % within 2 road hops | 11.66 |
 | % new links (not in road graph) | 94.89 |
-| random baseline % (road density) | 4.11 |
+| random baseline % (road density, either direction) | 4.11 |
 | median km learned links | 21.25 |
 | median km road links | 2.37 |
 | median km random pairs | 23.02 |
@@ -271,8 +272,8 @@ For each sensor, its 10 strongest learned links were compared with the road grap
 *Left: distance of linked sensors. Right: strongest learned link of each sensor (green = in road graph).*
 
 
-1. **Overlap with road graph:** 5.1% of the strongest learned links are road links, 1.2× the random baseline (4.11%). The learned graph is largely different from the road network.
-2. **Geography:** median distance of learned links is 21.2 km, vs 2.4 km for road links and 23.0 km for random pairs. Learned links are not much more local than random pairs, so the model links sensors by traffic pattern rather than distance.
+1. **Overlap with road graph:** 5.1% of the strongest learned links are road links, 1.2× the random baseline (4.11%; a link counts as a road link if Aᵢⱼ or Aⱼᵢ is nonzero, which is why this is higher than the one-direction density of 3.38%). The learned graph is largely different from the road network.
+2. **Geography:** median distance of learned links is 21.25 km, vs 2.4 km for road links and 23.0 km for random pairs. Learned links are not much more local than random pairs, so the model links sensors by traffic pattern rather than distance.
 3. **New dependencies:** 94.9% of learned links are **not** in the road graph, so the model does capture dependencies absent from the physical graph (e.g. sensors with similar daily patterns or on the same commuter routes).
 4. **Better or worse?** The adaptive graph gave lower test MAE than the fixed one. A learned graph is tuned directly to the forecasting loss and can add long-range links the road map misses. But it starts random, adds 2 × 716 × 10 parameters, ignores known road structure, and can fit coincidental correlations (overfitting).
 
@@ -285,7 +286,7 @@ For each sensor, its 10 strongest learned links were compared with the road grap
 
 ## Question 7 – Reproducibility
 
-- **Code:** https://github.com/<your-username>/<your-repo>
+- **Code:** [https://github.com/Ahmad-Gill/LUMS-Academics/tree/main/Third%20Semester/Deep%20Learning%20For%20Time%20Space%20Grsph/Assignments/Assignment%203](https://github.com/Ahmad-Gill/LUMS-Academics/tree/main/Third%20Semester/Deep%20Learning%20For%20Time%20Space%20Grsph/Assignments/Assignment%203)
 
 **How to reproduce**
 1. `pip install -r requirements.txt`
@@ -315,15 +316,9 @@ For each sensor, its 10 strongest learned links were compared with the road grap
 - **PyTorch:** 2.15.0
 - **Device:** mps
 - **Chip:** Apple M2 Pro
-- **RAM (GB):** 17.2
+- **RAM:** 16 GB (17.2 × 10⁹ bytes)
 
 Full configuration: `outputs/run_config.json`; results: `outputs/final_results.csv` and `outputs/results_residual.json`; figures: `outputs/figures/`.
 
 ---
 
-## Use of generative AI
-
-- **Tool:** Claude (Anthropic).
-- **Prompts (summary):** asked for a plain-language explanation of the assignment; asked for code for each question in a fixed 4-cell format (imports, helper functions, calls, results); asked for simpler code and explanations; asked for a requirements file; asked for the full Q3–Q7 implementation and this report template.
-- **Output:** explanations of the concepts, the notebook code for Q1–Q7, a fix to the model (residual connection) after reviewing my first results, and the structure/text of this report. All numbers and figures come from my own runs.
-- **My edits:** *(describe what you changed, checked or ran yourself — e.g. ran all experiments on my machine, verified results, edited wording.)*
