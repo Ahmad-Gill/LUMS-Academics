@@ -5,3 +5,5 @@ __pycache__/
 *.h5
 *.npy
 *.pkl
+# results table referenced in the report (the repo-root .gitignore excludes *.csv)
+!outputs/final_results.csv
