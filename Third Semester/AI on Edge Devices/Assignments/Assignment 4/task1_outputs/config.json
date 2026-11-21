@@ -1,0 +1,34 @@
+{
+  "seed": 42,
+  "data_root": "/Users/YOUR_NAME/datasets/imagenet100",
+  "kaggle_dataset": "ambityga/imagenet100",
+  "class_index_url": "https://storage.googleapis.com/download.tensorflow.org/data/imagenet_class_index.json",
+  "num_classes": 100,
+  "img_size": 224,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "n_train": 2000,
+  "n_val": 500,
+  "augmentation": "none (deterministic resize) -> teacher logits can be cached",
+  "epochs": 5,
+  "batch_size": 32,
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "scheduler": "CosineAnnealingLR, stepped every update",
+  "T": 3.0,
+  "lam": 0.5,
+  "eval_batch_size": 32,
+  "num_workers": 0,
+  "warmup_runs": 10,
+  "timed_runs": 20,
+  "out_dir": "./task1_outputs"
+}

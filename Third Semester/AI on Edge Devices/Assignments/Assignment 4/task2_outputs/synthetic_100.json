@@ -1,0 +1,502 @@
+[
+ {
+  "question": "Maya bakes 4 trays of cookies with 18 cookies on each tray. She gives 25 cookies to her neighbors and eats 3 herself. How many cookies does she have left?",
+  "solution": "She bakes 4*18=<<4*18=72>>72 cookies.\nShe gives away and eats 25+3=<<25+3=28>>28 cookies in total.\nShe has 72-28=<<72-28=44>>44 cookies left.\n#### 44",
+  "answer": 44
+ },
+ {
+  "question": "A family of 2 adults and 3 children takes a train. An adult ticket costs $14 and a child ticket costs half as much. How much does the family pay in total?",
+  "solution": "A child ticket costs 14/2=<<14/2=7>>7 dollars.\nThe adult tickets cost 2*14=<<2*14=28>>28 dollars.\nThe child tickets cost 3*7=<<3*7=21>>21 dollars.\nThe family pays 28+21=<<28+21=49>>49 dollars.\n#### 49",
+  "answer": 49
+ },
+ {
+  "question": "Liam runs 3 miles every weekday and 5 miles on each day of the weekend. How many miles does he run in 4 weeks?",
+  "solution": "On weekdays he runs 3*5=<<3*5=15>>15 miles each week.\nOn the weekend he runs 5*2=<<5*2=10>>10 miles each week.\nEach week he runs 15+10=<<15+10=25>>25 miles.\nIn 4 weeks he runs 25*4=<<25*4=100>>100 miles.\n#### 100",
+  "answer": 100
+ },
+ {
+  "question": "Nadia has a 2-kilogram bag of flour. Each loaf of bread she bakes uses 250 grams of flour. After baking 7 loaves, how many grams of flour are left in the bag?",
+  "solution": "The bag holds 2*1000=<<2*1000=2000>>2000 grams of flour.\nThe 7 loaves use 7*250=<<7*250=1750>>1750 grams.\nThere are 2000-1750=<<2000-1750=250>>250 grams left.\n#### 250",
+  "answer": 250
+ },
+ {
+  "question": "Omar wants a bike that costs $240. He already has $45 and saves $15 each week. How many weeks will it take him to have enough money?",
+  "solution": "He still needs 240-45=<<240-45=195>>195 dollars.\nAt 15 dollars a week, it takes 195/15=<<195/15=13>>13 weeks.\n#### 13",
+  "answer": 13
+ },
+ {
+  "question": "In a class of 32 students, 3/8 of the students walk to school and 1/4 take the bus. The rest are driven by their parents. How many students are driven to school?",
+  "solution": "The number who walk is 32*3/8=<<32*3/8=12>>12.\nThe number who take the bus is 32/4=<<32/4=8>>8.\nThe number who are driven is 32-12-8=<<32-12-8=12>>12.\n#### 12",
+  "answer": 12
+ },
+ {
+  "question": "Ella sits down in the theater at 7:00 pm. There are 15 minutes of previews, and then the movie runs for 135 minutes. How many minutes after 9:00 pm does the movie end?",
+  "solution": "Previews and the movie take 135+15=<<135+15=150>>150 minutes.\n9:00 pm is 2*60=<<2*60=120>>120 minutes after 7:00 pm.\nThe movie ends 150-120=<<150-120=30>>30 minutes after 9:00 pm.\n#### 30",
+  "answer": 30
+ },
+ {
+  "question": "In a basketball game, Jordan makes 6 two-point shots, 4 three-point shots, and 5 free throws worth 1 point each. How many points does he score?",
+  "solution": "Two-point shots give 6*2=<<6*2=12>>12 points.\nThree-point shots give 4*3=<<4*3=12>>12 points.\nIn total he scores 12+12+5=<<12+12+5=29>>29 points.\n#### 29",
+  "answer": 29
+ },
+ {
+  "question": "A jacket costs $80. It is on sale for 25% off, and Rosa also uses a $5 coupon after the discount. How much does she pay?",
+  "solution": "The discount is 80*25/100=<<80*25/100=20>>20 dollars.\nThe sale price is 80-20=<<80-20=60>>60 dollars.\nAfter the coupon she pays 60-5=<<60-5=55>>55 dollars.\n#### 55",
+  "answer": 55
+ },
+ {
+  "question": "A rectangular garden is 12 meters long and 8 meters wide. Fencing costs $7 per meter. How much will it cost to put a fence around the whole garden?",
+  "solution": "The perimeter is 2*(12+8)=<<2*(12+8)=40>>40 meters.\nThe fence costs 40*7=<<40*7=280>>280 dollars.\n#### 280",
+  "answer": 280
+ },
+ {
+  "question": "Priya is reading a 312-page book. She reads 24 pages every day and has been reading for 5 days. How many more days will it take her to finish the book?",
+  "solution": "She has read 24*5=<<24*5=120>>120 pages so far.\nShe has 312-120=<<312-120=192>>192 pages left.\nShe needs 192/24=<<192/24=8>>8 more days.\n#### 8",
+  "answer": 8
+ },
+ {
+  "question": "Daniel's car travels 15 kilometers on one liter of fuel, and fuel costs $1.20 per liter. He drives to a city 240 kilometers away and back. How much does he spend on fuel?",
+  "solution": "The round trip is 240*2=<<240*2=480>>480 kilometers.\nHe uses 480/15=<<480/15=32>>32 liters of fuel.\nThe fuel costs 32*1.2=<<32*1.2=38.4>>38.4 dollars.\n#### 38.4",
+  "answer": 38.4
+ },
+ {
+  "question": "At a party, 18 children each eat 3 slices of pizza. Each pizza is cut into 8 slices. What is the smallest number of whole pizzas that must be ordered?",
+  "solution": "The children eat 18*3=<<18*3=54>>54 slices.\nThat is 54/8=<<54/8=6.75>>6.75 pizzas, so 7 whole pizzas must be ordered.\n#### 7",
+  "answer": 7
+ },
+ {
+  "question": "A farmer collects 42 eggs every day and packs them into cartons of 12. How many full cartons can he fill with the eggs from one week?",
+  "solution": "In one week he collects 42*7=<<42*7=294>>294 eggs.\nThat is enough for 294/12=<<294/12=24.5>>24.5 cartons, so he can fill 24 full cartons.\n#### 24",
+  "answer": 24
+ },
+ {
+  "question": "Zoe sells lemonade for $0.75 a cup. She sells 48 cups and spent $12 on lemons, sugar, and cups. How much profit does she make?",
+  "solution": "She earns 48*0.75=<<48*0.75=36>>36 dollars from sales.\nHer profit is 36-12=<<36-12=24>>24 dollars.\n#### 24",
+  "answer": 24
+ },
+ {
+  "question": "The temperature at 6 am was 8 degrees. It rose 3 degrees every hour for 5 hours, and then a storm made it drop 4 degrees. What was the temperature after the storm?",
+  "solution": "The temperature rose 3*5=<<3*5=15>>15 degrees.\nIt reached 8+15=<<8+15=23>>23 degrees.\nAfter the storm it was 23-4=<<23-4=19>>19 degrees.\n#### 19",
+  "answer": 19
+ },
+ {
+  "question": "Ann has 26 stamps. Joe has 14 more stamps than Ann, and Ken has 3 times as many stamps as Joe. How many stamps do the three of them have altogether?",
+  "solution": "Joe has 26+14=<<26+14=40>>40 stamps.\nKen has 40*3=<<40*3=120>>120 stamps.\nTogether they have 26+40+120=<<26+40+120=186>>186 stamps.\n#### 186",
+  "answer": 186
+ },
+ {
+  "question": "Hassan is painting two walls that are each 4 meters wide and 3 meters tall. Each wall needs 2 coats of paint, and one liter of paint covers 6 square meters. How many liters of paint does he need?",
+  "solution": "Each wall has an area of 4*3=<<4*3=12>>12 square meters.\nTwo walls have an area of 12*2=<<12*2=24>>24 square meters.\nWith 2 coats he must cover 24*2=<<24*2=48>>48 square meters.\nHe needs 48/6=<<48/6=8>>8 liters of paint.\n#### 8",
+  "answer": 8
+ },
+ {
+  "question": "Sam gets $10 of allowance every week. He spends 40% of it and saves the rest. How much does he save in 6 weeks?",
+  "solution": "He spends 10*40/100=<<10*40/100=4>>4 dollars each week.\nHe saves 10-4=<<10-4=6>>6 dollars each week.\nIn 6 weeks he saves 6*6=<<6*6=36>>36 dollars.\n#### 36",
+  "answer": 36
+ },
+ {
+  "question": "A hiking trail is 17 kilometers long. Mei hikes at 4 kilometers per hour for the first 2 hours and then slows to 3 kilometers per hour for the rest of the trail. How many hours does the whole hike take?",
+  "solution": "In the first 2 hours she covers 4*2=<<4*2=8>>8 kilometers.\nShe has 17-8=<<17-8=9>>9 kilometers left.\nThat takes 9/3=<<9/3=3>>3 hours.\nThe whole hike takes 2+3=<<2+3=5>>5 hours.\n#### 5",
+  "answer": 5
+ },
+ {
+  "question": "The library charges a fine of $0.25 per book for each day it is late. Carlos returns 3 books 6 days late. How much is his fine in dollars?",
+  "solution": "He has 3*6=<<3*6=18>>18 book-days of lateness.\nHis fine is 18*0.25=<<18*0.25=4.5>>4.5 dollars.\n#### 4.5",
+  "answer": 4.5
+ },
+ {
+  "question": "A water tank holds 500 liters and is 3/5 full. Water drains out at 20 liters per hour. How many hours will it take for the tank to empty?",
+  "solution": "The tank contains 500*3/5=<<500*3/5=300>>300 liters.\nIt empties in 300/20=<<300/20=15>>15 hours.\n#### 15",
+  "answer": 15
+ },
+ {
+  "question": "Lila is 17 years old. Her grandmother is 4 times as old as Lila, and Lila's mother is 30 years younger than the grandmother. How old is Lila's mother?",
+  "solution": "The grandmother is 17*4=<<17*4=68>>68 years old.\nThe mother is 68-30=<<68-30=38>>38 years old.\n#### 38",
+  "answer": 38
+ },
+ {
+  "question": "A kitchen floor is 6 meters by 5 meters. Square tiles measure 0.5 meters on each side, so 4 tiles cover one square meter. Tiles come in boxes of 10 that cost $18 per box. How much do the tiles for the floor cost?",
+  "solution": "The floor has an area of 6*5=<<6*5=30>>30 square meters.\nIt needs 30*4=<<30*4=120>>120 tiles.\nThat is 120/10=<<120/10=12>>12 boxes.\nThe boxes cost 12*18=<<12*18=216>>216 dollars.\n#### 216",
+  "answer": 216
+ },
+ {
+  "question": "Aisha's phone plan costs $25 per month and includes 200 text messages. Each extra text costs $0.10. She sent 340 texts this month. What is her bill?",
+  "solution": "She sent 340-200=<<340-200=140>>140 extra texts.\nThe extra texts cost 140*0.1=<<140*0.1=14>>14 dollars.\nHer bill is 25+14=<<25+14=39>>39 dollars.\n#### 39",
+  "answer": 39
+ },
+ {
+  "question": "A coin jar holds 40 quarters, 55 dimes, and 80 nickels. How many dollars are in the jar?",
+  "solution": "The quarters are worth 40*0.25=<<40*0.25=10>>10 dollars.\nThe dimes are worth 55*0.1=<<55*0.1=5.5>>5.5 dollars.\nThe nickels are worth 80*0.05=<<80*0.05=4>>4 dollars.\nThe jar holds 10+5.5+4=<<10+5.5+4=19.5>>19.5 dollars.\n#### 19.5",
+  "answer": 19.5
+ },
+ {
+  "question": "A pool is 25 meters long. Felix swims 36 lengths on Monday and 48 lengths on Tuesday. How many meters does he swim over the two days?",
+  "solution": "He swims 36+48=<<36+48=84>>84 lengths in total.\nThat is 84*25=<<84*25=2100>>2100 meters.\n#### 2100",
+  "answer": 2100
+ },
+ {
+  "question": "A bakery sells muffins for $2.50 each or in packs of 6 for $12. How much money does Grace save by buying 18 muffins in packs instead of one at a time?",
+  "solution": "Buying singly costs 18*2.5=<<18*2.5=45>>45 dollars.\nShe needs 18/6=<<18/6=3>>3 packs.\nThe packs cost 3*12=<<3*12=36>>36 dollars.\nShe saves 45-36=<<45-36=9>>9 dollars.\n#### 9",
+  "answer": 9
+ },
+ {
+  "question": "A train travels at 80 kilometers per hour for 3 hours and then at 60 kilometers per hour for 2 hours. What is its average speed for the whole trip in kilometers per hour?",
+  "solution": "In the first part it travels 80*3=<<80*3=240>>240 kilometers.\nIn the second part it travels 60*2=<<60*2=120>>120 kilometers.\nThe total distance is 240+120=<<240+120=360>>360 kilometers.\nThe trip takes 5 hours, so the average speed is 360/5=<<360/5=72>>72 kilometers per hour.\n#### 72",
+  "answer": 72
+ },
+ {
+  "question": "A teacher buys 28 notebooks at $1.25 each and 28 pens at $0.50 each. She pays with $60. How much change does she get?",
+  "solution": "The notebooks cost 28*1.25=<<28*1.25=35>>35 dollars.\nThe pens cost 28*0.5=<<28*0.5=14>>14 dollars.\nThe total is 35+14=<<35+14=49>>49 dollars.\nHer change is 60-49=<<60-49=11>>11 dollars.\n#### 11",
+  "answer": 11
+ },
+ {
+  "question": "A soup recipe that serves 4 people uses 6 carrots. How many carrots are needed to make the soup for 14 people?",
+  "solution": "Each person needs 6/4=<<6/4=1.5>>1.5 carrots.\nFor 14 people, 1.5*14=<<1.5*14=21>>21 carrots are needed.\n#### 21",
+  "answer": 21
+ },
+ {
+  "question": "Ivan's long run is 10 kilometers in week 1 of his training plan. He adds 2 kilometers to it every week. How long is his long run in week 8?",
+  "solution": "From week 1 to week 8 there are 8-1=<<8-1=7>>7 increases.\nThe increases add 7*2=<<7*2=14>>14 kilometers.\nIn week 8 he runs 10+14=<<10+14=24>>24 kilometers.\n#### 24",
+  "answer": 24
+ },
+ {
+  "question": "A box holds 60 apples, and 1/5 of them are bruised and thrown away. The rest are split equally into 4 bags. How many apples are in each bag?",
+  "solution": "The number of bruised apples is 60/5=<<60/5=12>>12.\nThe number of good apples is 60-12=<<60-12=48>>48.\nEach bag has 48/4=<<48/4=12>>12 apples.\n#### 12",
+  "answer": 12
+ },
+ {
+  "question": "A concert hall has 1200 seats, and 85% of them are sold at $30 each. How much money do the ticket sales bring in?",
+  "solution": "The number of tickets sold is 1200*85/100=<<1200*85/100=1020>>1020.\nThe sales bring in 1020*30=<<1020*30=30600>>30600 dollars.\n#### 30600",
+  "answer": 30600
+ },
+ {
+  "question": "Tom sleeps 7 hours each weeknight and 9 hours each night on Friday and Saturday. How many hours does he sleep in 4 weeks?",
+  "solution": "He sleeps 7*5=<<7*5=35>>35 hours on the 5 weeknights.\nHe sleeps 9*2=<<9*2=18>>18 hours on the 2 weekend nights.\nHe sleeps 35+18=<<35+18=53>>53 hours each week.\nIn 4 weeks he sleeps 53*4=<<53*4=212>>212 hours.\n#### 212",
+  "answer": 212
+ },
+ {
+  "question": "Rafael plants 6 rows of tomato plants with 14 plants in each row. Each plant grows 9 tomatoes, but birds eat 1/3 of all the tomatoes. How many tomatoes does he harvest?",
+  "solution": "He has 6*14=<<6*14=84>>84 plants.\nThey grow 84*9=<<84*9=756>>756 tomatoes.\nBirds eat 756/3=<<756/3=252>>252 tomatoes.\nHe harvests 756-252=<<756-252=504>>504 tomatoes.\n#### 504",
+  "answer": 504
+ },
+ {
+  "question": "Four roommates split their apartment costs equally. The rent is $1850 a month and utilities are $210 a month. How much does each roommate pay per month?",
+  "solution": "The total cost is 1850+210=<<1850+210=2060>>2060 dollars.\nEach roommate pays 2060/4=<<2060/4=515>>515 dollars.\n#### 515",
+  "answer": 515
+ },
+ {
+  "question": "Kofi earns $18 per hour for the first 40 hours he works in a week and 1.5 times that rate for overtime. This week he worked 46 hours, and 10% of his pay is taken out for taxes. How much does he take home?",
+  "solution": "His regular pay is 40*18=<<40*18=720>>720 dollars.\nHis overtime rate is 18*1.5=<<18*1.5=27>>27 dollars per hour.\nHe worked 6 overtime hours, earning 6*27=<<6*27=162>>162 dollars.\nHe earned 720+162=<<720+162=882>>882 dollars before tax.\nThe tax is 882*10/100=<<882*10/100=88.2>>88.2 dollars.\nHe takes home 882-88.2=<<882-88.2=793.8>>793.8 dollars.\n#### 793.8",
+  "answer": 793.8
+ },
+ {
+  "question": "A pond has 8 frogs. The number of frogs doubles every month. How many frogs are in the pond after 3 months?",
+  "solution": "After 1 month there are 8*2=<<8*2=16>>16 frogs.\nAfter 2 months there are 16*2=<<16*2=32>>32 frogs.\nAfter 3 months there are 32*2=<<32*2=64>>64 frogs.\n#### 64",
+  "answer": 64
+ },
+ {
+  "question": "A bike shop has 15 bicycles and 7 tricycles on display. How many wheels are there in total?",
+  "solution": "The bicycles have 15*2=<<15*2=30>>30 wheels.\nThe tricycles have 7*3=<<7*3=21>>21 wheels.\nThere are 30+21=<<30+21=51>>51 wheels in total.\n#### 51",
+  "answer": 51
+ },
+ {
+  "question": "A printer prints 12 pages per minute. Lena needs 30 copies of an 18-page report. How many minutes will the printing take?",
+  "solution": "She needs 30*18=<<30*18=540>>540 pages.\nPrinting takes 540/12=<<540/12=45>>45 minutes.\n#### 45",
+  "answer": 45
+ },
+ {
+  "question": "A crate holds 24 bottles of juice. Each full bottle weighs 750 grams, and the empty crate weighs 2 kilograms. How many kilograms does the full crate weigh?",
+  "solution": "The bottles weigh 24*750=<<24*750=18000>>18000 grams.\nThat is 18000/1000=<<18000/1000=18>>18 kilograms.\nThe full crate weighs 18+2=<<18+2=20>>20 kilograms.\n#### 20",
+  "answer": 20
+ },
+ {
+  "question": "The Lopez family drives 450 kilometers at 90 kilometers per hour. They stop for 20 minutes after every 150 kilometers, but not at the end of the trip. How many minutes does the trip take?",
+  "solution": "Driving takes 450/90=<<450/90=5>>5 hours, which is 5*60=<<5*60=300>>300 minutes.\nThe trip has 450/150=<<450/150=3>>3 parts of 150 kilometers, so they make 2 stops.\nThe stops take 2*20=<<2*20=40>>40 minutes.\nThe trip takes 300+40=<<300+40=340>>340 minutes.\n#### 340",
+  "answer": 340
+ },
+ {
+  "question": "A bag has 150 candies. Anna takes 2/5 of them. Ben takes 1/3 of what is left, and Cara gets the rest. How many candies does Cara get?",
+  "solution": "Anna takes 150*2/5=<<150*2/5=60>>60 candies.\nThen 150-60=<<150-60=90>>90 candies remain.\nBen takes 90/3=<<90/3=30>>30 candies.\nCara gets 90-30=<<90-30=60>>60 candies.\n#### 60",
+  "answer": 60
+ },
+ {
+  "question": "A town has 12000 people, and its population grows by 5% each year. What will the population be after 2 years?",
+  "solution": "In the first year it grows by 12000*5/100=<<12000*5/100=600>>600 people, to 12000+600=<<12000+600=12600>>12600.\nIn the second year it grows by 12600*5/100=<<12600*5/100=630>>630 people, to 12600+630=<<12600+630=13230>>13230.\n#### 13230",
+  "answer": 13230
+ },
+ {
+  "question": "Noah's drawer has 5 pairs of blue socks and 3 times as many pairs of black socks. How many individual socks are in the drawer?",
+  "solution": "He has 5*3=<<5*3=15>>15 pairs of black socks.\nHe has 5+15=<<5+15=20>>20 pairs in total.\nThat is 20*2=<<20*2=40>>40 socks.\n#### 40",
+  "answer": 40
+ },
+ {
+  "question": "At the movies, popcorn costs $6.50 and a drink costs $3.75. Jun buys 2 popcorns and 3 drinks and pays with $30. How much change does he get?",
+  "solution": "The popcorn costs 2*6.5=<<2*6.5=13>>13 dollars.\nThe drinks cost 3*3.75=<<3*3.75=11.25>>11.25 dollars.\nThe total is 13+11.25=<<13+11.25=24.25>>24.25 dollars.\nHis change is 30-24.25=<<30-24.25=5.75>>5.75 dollars.\n#### 5.75",
+  "answer": 5.75
+ },
+ {
+  "question": "A school trip has 145 students and 11 teachers. Each bus holds 40 people and costs $250 to rent. How much does it cost to rent enough buses?",
+  "solution": "There are 145+11=<<145+11=156>>156 people.\nThey need 156/40=<<156/40=3.9>>3.9 buses, so 4 buses must be rented.\nThe buses cost 4*250=<<4*250=1000>>1000 dollars.\n#### 1000",
+  "answer": 1000
+ },
+ {
+  "question": "A wall clock gains 3 minutes every day. It is set to the correct time, and then 3 weeks and 2 days pass. How many minutes fast is the clock?",
+  "solution": "Three weeks is 3*7=<<3*7=21>>21 days.\nThe total time is 21+2=<<21+2=23>>23 days.\nThe clock is 23*3=<<23*3=69>>69 minutes fast.\n#### 69",
+  "answer": 69
+ },
+ {
+  "question": "Kim's sunflower is 15 cm tall and grows 4 cm each week. Her brother's plant is 33 cm tall and grows 1 cm each week. After how many weeks will the plants be the same height?",
+  "solution": "The brother's plant is 33-15=<<33-15=18>>18 cm taller.\nThe sunflower catches up by 4-1=<<4-1=3>>3 cm each week.\nThey are the same height after 18/3=<<18/3=6>>6 weeks.\n#### 6",
+  "answer": 6
+ },
+ {
+  "question": "In a charity run, each of Bella's 4 sponsors pays $3 for every kilometer she runs. She runs 12 kilometers, and a local shop also donates $50. How much money does she raise?",
+  "solution": "She raises 3*4=<<3*4=12>>12 dollars per kilometer.\nFor 12 kilometers that is 12*12=<<12*12=144>>144 dollars.\nWith the shop's gift she raises 144+50=<<144+50=194>>194 dollars.\n#### 194",
+  "answer": 194
+ },
+ {
+  "question": "An ice cream shop charges $2 for a cone with one scoop and $1.25 for each extra scoop. A group buys 3 triple-scoop cones and 2 double-scoop cones. How much do they spend?",
+  "solution": "A triple-scoop cone costs 2+2*1.25=<<2+2*1.25=4.5>>4.5 dollars.\nA double-scoop cone costs 2+1.25=<<2+1.25=3.25>>3.25 dollars.\nThe triple cones cost 3*4.5=<<3*4.5=13.5>>13.5 dollars.\nThe double cones cost 2*3.25=<<2*3.25=6.5>>6.5 dollars.\nThey spend 13.5+6.5=<<13.5+6.5=20>>20 dollars.\n#### 20",
+  "answer": 20
+ },
+ {
+  "question": "Hana has a ribbon 5 meters long. She cuts as many 35 cm pieces as she can. How many centimeters of ribbon are left over?",
+  "solution": "The ribbon is 5*100=<<5*100=500>>500 cm long.\nFourteen pieces use 14*35=<<14*35=490>>490 cm, and a fifteenth piece would need 15*35=<<15*35=525>>525 cm, which is more than 500, so she cuts 14 pieces.\nThe leftover is 500-490=<<500-490=10>>10 cm.\n#### 10",
+  "answer": 10
+ },
+ {
+  "question": "In a league of 8 teams, every team plays each other team twice. How many games are played in the season?",
+  "solution": "Each team plays 7 opponents twice, which is 7*2=<<7*2=14>>14 games.\nCounting each team's games gives 8*14=<<8*14=112>>112.\nEach game involves 2 teams, so there are 112/2=<<112/2=56>>56 games.\n#### 56",
+  "answer": 56
+ },
+ {
+  "question": "Mr. Patel deposits $500 in an account that pays 4% simple interest per year. How much money is in the account after 3 years?",
+  "solution": "The interest each year is 500*4/100=<<500*4/100=20>>20 dollars.\nOver 3 years the interest is 20*3=<<20*3=60>>60 dollars.\nThe account has 500+60=<<500+60=560>>560 dollars.\n#### 560",
+  "answer": 560
+ },
+ {
+  "question": "Every school day, Sofia does homework for 5 subjects, spending 25 minutes on each, and takes one 15-minute break. How many minutes does she spend on homework and the break in a 5-day school week?",
+  "solution": "Homework takes 5*25=<<5*25=125>>125 minutes each day.\nWith the break it is 125+15=<<125+15=140>>140 minutes each day.\nOver 5 days it is 140*5=<<140*5=700>>700 minutes.\n#### 700",
+  "answer": 700
+ },
+ {
+  "question": "A small farm has 12 chickens, 8 cows, and 5 dogs. How many legs do the animals have altogether?",
+  "solution": "The chickens have 12*2=<<12*2=24>>24 legs.\nThe cows have 8*4=<<8*4=32>>32 legs.\nThe dogs have 5*4=<<5*4=20>>20 legs.\nAltogether there are 24+32+20=<<24+32+20=76>>76 legs.\n#### 76",
+  "answer": 76
+ },
+ {
+  "question": "In a family of 4, each person drinks 6 glasses of water a day. Each glass holds 250 mL. How many liters of water does the family drink in a week?",
+  "solution": "The family drinks 4*6=<<4*6=24>>24 glasses a day.\nThat is 24*250=<<24*250=6000>>6000 mL, or 6000/1000=<<6000/1000=6>>6 liters a day.\nIn a week they drink 6*7=<<6*7=42>>42 liters.\n#### 42",
+  "answer": 42
+ },
+ {
+  "question": "Jada had 90 stickers. She gave 1/6 of them to her brother and 12 to a friend. Then she bought 2 packs of 8 stickers. How many stickers does she have now?",
+  "solution": "She gave her brother 90/6=<<90/6=15>>15 stickers.\nAfter giving some away she had 90-15-12=<<90-15-12=63>>63 stickers.\nThe new packs have 2*8=<<2*8=16>>16 stickers.\nShe now has 63+16=<<63+16=79>>79 stickers.\n#### 79",
+  "answer": 79
+ },
+ {
+  "question": "A gym charges $40 per month, or $420 for a full year paid at once. How much does a member save in a year by paying for the whole year at once?",
+  "solution": "Paying monthly costs 40*12=<<40*12=480>>480 dollars a year.\nThe savings are 480-420=<<480-420=60>>60 dollars.\n#### 60",
+  "answer": 60
+ },
+ {
+  "question": "A car wash charges $8 per car and $12 per truck. On Saturday it washed 23 cars and 9 trucks and spent $45 on soap. What was its profit?",
+  "solution": "The cars brought in 23*8=<<23*8=184>>184 dollars.\nThe trucks brought in 9*12=<<9*12=108>>108 dollars.\nThe total was 184+108=<<184+108=292>>292 dollars.\nThe profit was 292-45=<<292-45=247>>247 dollars.\n#### 247",
+  "answer": 247
+ },
+ {
+  "question": "A bookstore has 7 shelves. Each shelf has 4 rows with 15 books in each row. During a sale, 2/5 of the books are sold. How many books are left?",
+  "solution": "Each shelf holds 4*15=<<4*15=60>>60 books.\nThe store has 7*60=<<7*60=420>>420 books.\nIt sells 420*2/5=<<420*2/5=168>>168 books.\nIt has 420-168=<<420-168=252>>252 books left.\n#### 252",
+  "answer": 252
+ },
+ {
+  "question": "A flight leaves at 9:40 am and lands at 2:15 pm in the same time zone. How many minutes long is the flight?",
+  "solution": "From 9:40 am to 2:40 pm is 5 hours, or 5*60=<<5*60=300>>300 minutes.\n2:15 pm is 25 minutes earlier, so the flight is 300-25=<<300-25=275>>275 minutes.\n#### 275",
+  "answer": 275
+ },
+ {
+  "question": "Leo scored 78, 85, 92, and 88 on four tests. What score does he need on the fifth test to have an average of 87?",
+  "solution": "An average of 87 over 5 tests needs 87*5=<<87*5=435>>435 points.\nHe has 78+85+92+88=<<78+85+92+88=343>>343 points so far.\nHe needs 435-343=<<435-343=92>>92 on the fifth test.\n#### 92",
+  "answer": 92
+ },
+ {
+  "question": "Five coworkers carpool to work, a 60-kilometer round trip each day. The car travels 12 kilometers per liter, and fuel costs $1.50 per liter. They split the fuel cost equally for 20 work days. How much does each person pay?",
+  "solution": "The car uses 60/12=<<60/12=5>>5 liters per day.\nOver 20 days it uses 5*20=<<5*20=100>>100 liters.\nThe fuel costs 100*1.5=<<100*1.5=150>>150 dollars.\nEach person pays 150/5=<<150/5=30>>30 dollars.\n#### 30",
+  "answer": 30
+ },
+ {
+  "question": "Each loaf of bread has 22 slices, and each sandwich uses 2 slices. How many loaves are needed to make 75 sandwiches?",
+  "solution": "The sandwiches need 75*2=<<75*2=150>>150 slices.\nSix loaves have 6*22=<<6*22=132>>132 slices, which is not enough.\nSeven loaves have 7*22=<<7*22=154>>154 slices, which is enough, so 7 loaves are needed.\n#### 7",
+  "answer": 7
+ },
+ {
+  "question": "Mia buys 3 packs of 20 balloons for a party. While blowing them up, 6 balloons pop. She shares the rest equally among 9 children. How many balloons does each child get?",
+  "solution": "She bought 3*20=<<3*20=60>>60 balloons.\nAfter the pops she has 60-6=<<60-6=54>>54 balloons.\nEach child gets 54/9=<<54/9=6>>6 balloons.\n#### 6",
+  "answer": 6
+ },
+ {
+  "question": "A dog eats 300 grams of food twice a day. How many days will a 15-kilogram bag of dog food last?",
+  "solution": "The dog eats 300*2=<<300*2=600>>600 grams a day.\nThe bag holds 15*1000=<<15*1000=15000>>15000 grams.\nThe bag lasts 15000/600=<<15000/600=25>>25 days.\n#### 25",
+  "answer": 25
+ },
+ {
+  "question": "Each morning, Yuki walks 0.8 km to the station, rides the train 24 km, and walks 1.2 km to the office. She makes the same trip home. How many kilometers does she travel in a 5-day work week?",
+  "solution": "One way is 0.8+24+1.2=<<0.8+24+1.2=26>>26 km.\nA round trip is 26*2=<<26*2=52>>52 km.\nIn 5 days she travels 52*5=<<52*5=260>>260 km.\n#### 260",
+  "answer": 260
+ },
+ {
+  "question": "At a bake sale, brownies cost $1.50 and cookies cost $0.75. The club sells 40 brownies and 3 times as many cookies. How much money does the club make?",
+  "solution": "They sell 40*3=<<40*3=120>>120 cookies.\nThe brownies bring in 40*1.5=<<40*1.5=60>>60 dollars.\nThe cookies bring in 120*0.75=<<120*0.75=90>>90 dollars.\nThe club makes 60+90=<<60+90=150>>150 dollars.\n#### 150",
+  "answer": 150
+ },
+ {
+  "question": "A scarf takes 3 balls of yarn and a hat takes 2 balls. Ruth knits 4 scarves and 5 hats. Each ball of yarn costs $6.50. How much does she spend on yarn?",
+  "solution": "The scarves need 4*3=<<4*3=12>>12 balls.\nThe hats need 5*2=<<5*2=10>>10 balls.\nShe needs 12+10=<<12+10=22>>22 balls.\nThe yarn costs 22*6.5=<<22*6.5=143>>143 dollars.\n#### 143",
+  "answer": 143
+ },
+ {
+  "question": "Kim has 48 marbles. She loses 1/4 of them, then wins 14 in a game. Then she gives half of her marbles to her sister. How many marbles does Kim have now?",
+  "solution": "She loses 48/4=<<48/4=12>>12 marbles.\nShe has 48-12=<<48-12=36>>36 marbles left.\nAfter winning she has 36+14=<<36+14=50>>50 marbles.\nAfter giving half away she has 50/2=<<50/2=25>>25 marbles.\n#### 25",
+  "answer": 25
+ },
+ {
+  "question": "A space heater uses 1.5 kWh of electricity per hour. It runs 6 hours a day for 30 days, and electricity costs $0.12 per kWh. How much does running the heater cost?",
+  "solution": "It uses 1.5*6=<<1.5*6=9>>9 kWh a day.\nOver 30 days it uses 9*30=<<9*30=270>>270 kWh.\nThe cost is 270*0.12=<<270*0.12=32.4>>32.4 dollars.\n#### 32.4",
+  "answer": 32.4
+ },
+ {
+  "question": "A running track is 400 meters around. Jo runs 12 laps and Mia runs 3 kilometers on the road. How many more meters does Jo run than Mia?",
+  "solution": "Jo runs 400*12=<<400*12=4800>>4800 meters.\nMia runs 3*1000=<<3*1000=3000>>3000 meters.\nJo runs 4800-3000=<<4800-3000=1800>>1800 more meters.\n#### 1800",
+  "answer": 1800
+ },
+ {
+  "question": "A shoe store sells sneakers for $60 a pair, and a second pair is half price. Dev buys 2 pairs and a pack of socks for $8. How much does he spend?",
+  "solution": "The second pair costs 60/2=<<60/2=30>>30 dollars.\nThe two pairs cost 60+30=<<60+30=90>>90 dollars.\nWith the socks he spends 90+8=<<90+8=98>>98 dollars.\n#### 98",
+  "answer": 98
+ },
+ {
+  "question": "An auditorium has 9 rows with 8 chairs in each row. If 65 students sit down, how many chairs are empty?",
+  "solution": "There are 9*8=<<9*8=72>>72 chairs.\nThe number of empty chairs is 72-65=<<72-65=7>>7.\n#### 7",
+  "answer": 7
+ },
+ {
+  "question": "A soccer tournament has 16 teams with 11 players each. Every player gets 3 bottles of water per day for the 2 days of the tournament. Bottles come in cases of 24. How many cases are needed?",
+  "solution": "There are 16*11=<<16*11=176>>176 players.\nThey use 176*3=<<176*3=528>>528 bottles per day.\nOver 2 days they use 528*2=<<528*2=1056>>1056 bottles.\nThat is 1056/24=<<1056/24=44>>44 cases.\n#### 44",
+  "answer": 44
+ },
+ {
+  "question": "A laptop costs $640, plus 8% sales tax. Nina pays for it in 4 equal payments. How much is each payment?",
+  "solution": "The tax is 640*8/100=<<640*8/100=51.2>>51.2 dollars.\nThe total is 640+51.2=<<640+51.2=691.2>>691.2 dollars.\nEach payment is 691.2/4=<<691.2/4=172.8>>172.8 dollars.\n#### 172.8",
+  "answer": 172.8
+ },
+ {
+  "question": "On a map, 1 cm stands for 25 km. Two towns are 7.2 cm apart on the map. How many hours will it take to drive between them at 60 km per hour?",
+  "solution": "The real distance is 7.2*25=<<7.2*25=180>>180 km.\nThe drive takes 180/60=<<180/60=3>>3 hours.\n#### 3",
+  "answer": 3
+ },
+ {
+  "question": "A book club has 6 members, and each member reads 4 books this month. Half of the books are borrowed from the library, and the rest are bought for $11 each. How much does the club spend on books?",
+  "solution": "They read 6*4=<<6*4=24>>24 books.\nThey buy 24/2=<<24/2=12>>12 books.\nThe books cost 12*11=<<12*11=132>>132 dollars.\n#### 132",
+  "answer": 132
+ },
+ {
+  "question": "A kiddie pool holds 360 liters and is already 1/4 full. A hose adds 10 liters per minute. How many minutes will it take to fill the pool?",
+  "solution": "The pool has 360/4=<<360/4=90>>90 liters in it.\nIt needs 360-90=<<360-90=270>>270 more liters.\nFilling takes 270/10=<<270/10=27>>27 minutes.\n#### 27",
+  "answer": 27
+ },
+ {
+  "question": "Raffle tickets cost $2 each or 3 for $5. The school sold 45 single tickets and 30 bundles of 3. The prizes cost $80. How much money did the raffle raise after paying for prizes?",
+  "solution": "Single tickets brought in 45*2=<<45*2=90>>90 dollars.\nBundles brought in 30*5=<<30*5=150>>150 dollars.\nThe total was 90+150=<<90+150=240>>240 dollars.\nAfter prizes the raffle raised 240-80=<<240-80=160>>160 dollars.\n#### 160",
+  "answer": 160
+ },
+ {
+  "question": "Rita's brother is 13 years old. In 5 years, Rita will be twice as old as her brother is now. How old is Rita now?",
+  "solution": "In 5 years Rita will be 13*2=<<13*2=26>>26 years old.\nRita is 26-5=<<26-5=21>>21 years old now.\n#### 21",
+  "answer": 21
+ },
+ {
+  "question": "A box has 24 chocolate bars, and each bar has 12 squares. Each of the 30 students in a class gets 9 squares. How many squares are left?",
+  "solution": "The box has 24*12=<<24*12=288>>288 squares.\nThe students get 30*9=<<30*9=270>>270 squares.\nThere are 288-270=<<288-270=18>>18 squares left.\n#### 18",
+  "answer": 18
+ },
+ {
+  "question": "Alex can paint 15 meters of fence per hour and Ben can paint 10 meters per hour. Working together, how many hours will it take them to paint a 150-meter fence?",
+  "solution": "Together they paint 15+10=<<15+10=25>>25 meters per hour.\nThe fence takes 150/25=<<150/25=6>>6 hours.\n#### 6",
+  "answer": 6
+ },
+ {
+  "question": "Two cakes are each cut into 16 slices. Each of 9 guests eats one slice, and 3 of the guests come back for a second slice. How many slices are left?",
+  "solution": "There are 2*16=<<2*16=32>>32 slices.\nThe guests eat 9+3=<<9+3=12>>12 slices.\nThere are 32-12=<<32-12=20>>20 slices left.\n#### 20",
+  "answer": 20
+ },
+ {
+  "question": "Bike rentals cost a $5 fee plus $3 per hour. Four friends each rent a bike for 3.5 hours. How much do they pay altogether?",
+  "solution": "Each bike costs 3*3.5=<<3*3.5=10.5>>10.5 dollars for the hours.\nEach rental costs 5+10.5=<<5+10.5=15.5>>15.5 dollars.\nThe four rentals cost 15.5*4=<<15.5*4=62>>62 dollars.\n#### 62",
+  "answer": 62
+ },
+ {
+  "question": "Carmen's car showed 23450 kilometers at the start of the week and 24150 at the end of the week. On average, how many kilometers did she drive each day?",
+  "solution": "She drove 24150-23450=<<24150-23450=700>>700 kilometers.\nThat is 700/7=<<700/7=100>>100 kilometers per day.\n#### 100",
+  "answer": 100
+ },
+ {
+  "question": "At the market, Ben buys 3 kg of potatoes at $1.20 per kg, 2 kg of onions at $1.50 per kg, and 4 peppers at $0.65 each. How much does he spend?",
+  "solution": "The potatoes cost 3*1.2=<<3*1.2=3.6>>3.6 dollars.\nThe onions cost 2*1.5=<<2*1.5=3>>3 dollars.\nThe peppers cost 4*0.65=<<4*0.65=2.6>>2.6 dollars.\nHe spends 3.6+3+2.6=<<3.6+3+2.6=9.2>>9.2 dollars.\n#### 9.2",
+  "answer": 9.2
+ },
+ {
+  "question": "Ines does 3 loads of laundry a week. Each load takes 45 minutes to wash and 50 minutes to dry. How many hours does she spend on laundry in 4 weeks?",
+  "solution": "Each load takes 45+50=<<45+50=95>>95 minutes.\nEach week takes 95*3=<<95*3=285>>285 minutes.\nFour weeks take 285*4=<<285*4=1140>>1140 minutes.\nThat is 1140/60=<<1140/60=19>>19 hours.\n#### 19",
+  "answer": 19
+ },
+ {
+  "question": "A soccer team scored 2 goals per game in its first 9 games and 3 goals per game in its next 6 games. How many more goals does it need to reach 50 goals for the season?",
+  "solution": "The first 9 games gave 2*9=<<2*9=18>>18 goals.\nThe next 6 games gave 3*6=<<3*6=18>>18 goals.\nThe team has 18+18=<<18+18=36>>36 goals.\nIt needs 50-36=<<50-36=14>>14 more goals.\n#### 14",
+  "answer": 14
+ },
+ {
+  "question": "Four friends have dinner. The bill is $64, and they add a 15% tip. They split the total equally. How much does each friend pay?",
+  "solution": "The tip is 64*15/100=<<64*15/100=9.6>>9.6 dollars.\nThe total is 64+9.6=<<64+9.6=73.6>>73.6 dollars.\nEach friend pays 73.6/4=<<73.6/4=18.4>>18.4 dollars.\n#### 18.4",
+  "answer": 18.4
+ },
+ {
+  "question": "A store receives 12 cartons of spice jars with 36 jars in each carton. 32 jars arrive broken. The rest are put on display in rows of 20. How many rows are there?",
+  "solution": "The store receives 12*36=<<12*36=432>>432 jars.\nThe unbroken jars number 432-32=<<432-32=400>>400.\nThere are 400/20=<<400/20=20>>20 rows.\n#### 20",
+  "answer": 20
+ },
+ {
+  "question": "Ava earns $12 per hour babysitting. She babysits 4 hours on Friday and 5.5 hours on Saturday, then spends 1/3 of her earnings on a game. How much money does she have left?",
+  "solution": "She babysits 4+5.5=<<4+5.5=9.5>>9.5 hours.\nShe earns 9.5*12=<<9.5*12=114>>114 dollars.\nThe game costs 114/3=<<114/3=38>>38 dollars.\nShe has 114-38=<<114-38=76>>76 dollars left.\n#### 76",
+  "answer": 76
+ },
+ {
+  "question": "Pumpkin patch admission is $9 for adults and half price for children. A family of 2 adults and 4 children goes, and they buy 3 pumpkins at $4 each. They pay with a $60 bill. How much change do they get?",
+  "solution": "A child ticket costs 9/2=<<9/2=4.5>>4.5 dollars.\nAdult tickets cost 2*9=<<2*9=18>>18 dollars.\nChild tickets cost 4*4.5=<<4*4.5=18>>18 dollars.\nThe pumpkins cost 3*4=<<3*4=12>>12 dollars.\nThey spend 18+18+12=<<18+18+12=48>>48 dollars.\nThey pay with $60, so their change is 60-48=<<60-48=12>>12 dollars.\n#### 12",
+  "answer": 12
+ },
+ {
+  "question": "There are 18 steps between each floor of an office building. Omar climbs from the ground floor to the 9th floor and does this twice each work day. How many steps does he climb in a 5-day work week?",
+  "solution": "Each climb is 9*18=<<9*18=162>>162 steps.\nEach day he climbs 162*2=<<162*2=324>>324 steps.\nIn 5 days he climbs 324*5=<<324*5=1620>>1620 steps.\n#### 1620",
+  "answer": 1620
+ },
+ {
+  "question": "A party punch is made from 2 parts juice and 3 parts soda. How many liters of juice are in 15 liters of punch?",
+  "solution": "The punch has 2+3=<<2+3=5>>5 parts.\nEach part is 15/5=<<15/5=3>>3 liters.\nThe juice is 3*2=<<3*2=6>>6 liters.\n#### 6",
+  "answer": 6
+ },
+ {
+  "question": "Ravi types 45 words per minute. His essay will be 1800 words long, and he has already typed 630 words. How many more minutes will he need?",
+  "solution": "He has 1800-630=<<1800-630=1170>>1170 words left.\nHe needs 1170/45=<<1170/45=26>>26 minutes.\n#### 26",
+  "answer": 26
+ },
+ {
+  "question": "The Kim family has a $1500 vacation budget. The hotel costs $185 per night for 4 nights, and food costs $45 per day for 5 days. After paying for the hotel and food, they spend 1/5 of the remaining money on souvenirs. How much of the budget is left after that?",
+  "solution": "The hotel costs 4*185=<<4*185=740>>740 dollars.\nFood costs 45*5=<<45*5=225>>225 dollars.\nThe total is 740+225=<<740+225=965>>965 dollars.\nThey have 1500-965=<<1500-965=535>>535 dollars before souvenirs.\nSouvenirs cost 535/5=<<535/5=107>>107 dollars.\nThey have 535-107=<<535-107=428>>428 dollars left.\n#### 428",
+  "answer": 428
+ },
+ {
+  "question": "A beekeeper has 6 hives, and each hive makes 25 kg of honey a year. She sells the honey in 500-gram jars for $8 each. Jars and labels cost her $350 for the year. What is her profit for the year?",
+  "solution": "The hives make 6*25=<<6*25=150>>150 kg of honey.\nThat is 150*1000=<<150*1000=150000>>150000 grams.\nShe fills 150000/500=<<150000/500=300>>300 jars.\nShe makes 300*8=<<300*8=2400>>2400 dollars from sales.\nHer profit is 2400-350=<<2400-350=2050>>2050 dollars.\n#### 2050",
+  "answer": 2050
+ }
+]

@@ -1,0 +1,47 @@
+{
+  "hardware": {
+    "OS": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "Python": "3.14.2",
+    "PyTorch": "2.15.0",
+    "Device": "mps",
+    "Chip": "Apple M2 Pro",
+    "RAM (GB)": 17.2
+  },
+  "seed": 42,
+  "hyperparameters": {
+    "d_hidden": 32,
+    "emb_dim": 10,
+    "lr": 0.001,
+    "batch_size": 64,
+    "epochs": 30,
+    "patience": 5,
+    "grad_clip": 5.0,
+    "seed": 42
+  },
+  "splits": {
+    "train": [
+      "2020-01-01 00:00",
+      "2020-12-31 23:45"
+    ],
+    "val": [
+      "2021-01-01 00:00",
+      "2021-03-31 23:45"
+    ],
+    "test": [
+      "2021-04-01 00:00",
+      "2021-12-31 23:45"
+    ]
+  },
+  "epochs": {
+    "temporal_only": 30,
+    "stgnn_fixed": 29,
+    "stgnn_adaptive": 30,
+    "stgnn_hybrid": 30
+  },
+  "training_time_s": {
+    "temporal_only": 723.4,
+    "stgnn_fixed": 743.2,
+    "stgnn_adaptive": 767.0,
+    "stgnn_hybrid": 776.0
+  }
+}

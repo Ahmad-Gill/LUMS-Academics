@@ -1,0 +1,32 @@
+[
+  {
+    "Strategy": "min",
+    "Lambda": null,
+    "Accuracy (%)": 78.0,
+    "Tie Rate (%)": 88.0
+  },
+  {
+    "Strategy": "product",
+    "Lambda": null,
+    "Accuracy (%)": 76.0,
+    "Tie Rate (%)": 44.0
+  },
+  {
+    "Strategy": "step_penalty",
+    "Lambda": 0.0,
+    "Accuracy (%)": 78.0,
+    "Tie Rate (%)": 74.0
+  },
+  {
+    "Strategy": "step_penalty",
+    "Lambda": 0.5,
+    "Accuracy (%)": 78.0,
+    "Tie Rate (%)": 72.0
+  },
+  {
+    "Strategy": "step_penalty",
+    "Lambda": 2.0,
+    "Accuracy (%)": 78.0,
+    "Tie Rate (%)": 72.0
+  }
+]
